@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to MongoDB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+let MONGODB_URI = process.env.MONGODB_URI || "<dbuser>:<dbpassword>@ds159273.mlab.com:59273/heroku_53dn675g";
 // <dbuser>:<dbpassword>@ds159273.mlab.com:59273/heroku_53dn675g
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
